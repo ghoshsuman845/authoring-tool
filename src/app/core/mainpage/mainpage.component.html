@@ -1,0 +1,39 @@
+<div class="container">
+        <ul class="list-group" style="width: 96%;margin-top:3%;">
+                
+                <li class="list-group-item" >
+                        <div class="col-md">
+                                <button type="button" class="btn btn-1" (click)="addPage()">Add Page</button>
+                                <button type="button" class="btn btn-light">Add SubMenu</button>
+                              </div>
+                </li>
+                <li class="list-group-item" *ngFor="let page of pages; let index=index">
+                        <div class="col-md">
+                                
+                                <div class="card-counter primary">
+                                        <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" (click)="onEdit(pages.number)" style="border: none;background-color:#7386D5;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                  <a class="dropdown-item" href="#">Edit</a>
+                                                  
+                                                </div>
+                                              </div>
+                                  
+                                        
+                                                 
+                                        <i class="fa fa-trash-o" aria-hidden="true" style="float: right;" (click)="deletePage(pages.number)"></i>
+                                       
+                                 
+                                  <span class="count-numbers">Page Title</span>
+                                   <span class="count-name">{{page.number}}</span> 
+                                </div>
+                              </div>
+                    
+                </li>
+                
+                
+              </ul>
+</div>      
+    
